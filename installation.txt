@@ -8,7 +8,7 @@ WAS MACHT DIESES MODUL?
 
 Dieses Modul ermöglicht die Anzeige der im Shop-Admin definierten Sprachsymbole (Flaggen) und Währungssymbole als Links im Navigationsbereich des Headers.
 
-Voraussetzung ist, dass mindestens eine zusätzliche Sprache oder Währung eingerichtet ist.
+Voraussetzung ist eine konfigurierte zusätzliche Sprache oder Währung.
 
 Die Anzeige im Header kann unter
 Admin → Konfiguration → Layout-Einstellungen
@@ -16,49 +16,43 @@ ein- oder ausgeschaltet werden.
 
 ========================================================
 
-Bitte erstellen Sie vor der Installation unbedingt eine Sicherung Ihrer Dateien sowie der SQL-Datenbank und führen Sie anschließend die Dateien dieses Moduls mit Ihrer bestehenden Zen-Cart-Installation zusammen.
-
 INSTALLATION
 
-Schritt 1:
+Vor der Installation eine Sicherung der Dateien und der Datenbank erstellen. Anschließend die Dateien dieses Moduls mit der bestehenden Zen-Cart-Installation zusammenführen.
 
-Im Verzeichnis 1_NEUE_DATEIEN/ befindet sich ein Verzeichnis ADMIN/.
-Benennen Sie dieses Verzeichnis entsprechend dem in Ihrem Shop tatsächlich verwendeten Admin-Verzeichnis um.
+Schritt 1:
+Verzeichnis DEIN-ADMIN/ entsprechend der tatsächlichen Shop-Admin-Struktur umbenennen.
 
 Schritt 2:
+Dateien mit der bestehenden Installation auf dem Server abgleichen.
+In vielen Installationen betrifft dies primär:
 
-Laden Sie alle Dateien aus dem Verzeichnis 1_NEUE_DATEIEN auf den Server hoch.
-
-Schritt 3:
-
-Vergleichen Sie die Dateien aus dem Verzeichnis 2_GEAENDERTE_DATEIEN mit den vorhandenen Dateien auf Ihrem Server.
+- tpl_header.php
 
 Hinweis:
-Um eine Datei zu vergleichen, benennen Sie diese z. B. von tpl_header.php in tpl_header.php.bak um und laden Sie beide Versionen herunter. Anschließend können Sie beide Dateien mit einem Tool wie Meld oder einem vergleichbaren Diff-Tool vergleichen und Änderungen gezielt übernehmen.
+Zum Vergleich eine Datei z. B. von tpl_header.php in tpl_header.php.bak umbenennen und lokal herunterladen.
+Anschließend beide Versionen mit einem Diff-Tool (z. B. Meld) vergleichen und Änderungen gezielt übernehmen.
 
-Schritt 4:
-
-Laden Sie anschließend die geprüften Dateien aus dem Verzeichnis 2_GEAENDERTE_DATEIEN auf den Server hoch.
+Schritt 3:
+Nach dem Merge alle Dateien auf den Server hochladen.
+Bei Nutzung von responsive_classic sind keine Anpassungen an anderen Templates erforderlich.
 
 ========================================================
 
 DEINSTALLATION
 
 Schritt 1:
-
-Entfernen Sie die mit diesem Modul installierten Dateien von Ihrem Server. Stellen Sie dabei sicher, dass zusammengeführte Dateien wie
+Installierte Modul-Dateien vom Server entfernen.
+Zusammengeführte Dateien wie:
 
 includes/templates/TEMPLATE_NAME/common/tpl_header.php
 
-durch die zuvor gesicherten Originaldateien ersetzt werden.
+durch die gesicherten Originaldateien ersetzen.
 
 Schritt 2:
-
-Führen Sie die folgenden SQL-Anweisungen über
-
+SQL-Anweisungen über
 Admin → Tools → SQL-Patches installieren
-
-aus, um die Konfigurationseinträge aus der Datenbank zu entfernen:
+ausführen:
 
 DELETE FROM configuration WHERE configuration_key = 'HEADER_LANGUAGES_DISPLAY';
 DELETE FROM configuration WHERE configuration_key = 'HEADER_CURRENCIES_DISPLAY';
