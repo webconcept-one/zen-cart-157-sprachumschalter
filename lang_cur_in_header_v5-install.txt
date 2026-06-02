@@ -1,85 +1,94 @@
-Language/Currency Links in Header
-Version 4.2.0 for Zen Cart v2.x.x
-Bootsrap template files for v3.7
+Sprachen und Währungs Umschalter
 
-Designed by: Neville Kerr
-Updated to version 2.0 by: Twitchtoo Media
-Updated to version 3.0 by: Benny Philibel
-Updated to version 4.+ by: Pilou2/Piloujp
+Version 5.0 für deutsche Zen Cart Pro 157k (zen-cart-pro.at)
 
-
-Instructions and file set updated for Zen Cart v2.x.x and php v8.x.
-It now installs into the template default AND responsive_classic directory.  This means it will be available to all templates that come with the standard Zen Cart available for download.
-Each template has its own CSS file for easier customization.
-If you're using a custom template, please copy and change the folder name from "responsive_classic" or which ever your template is based on, to the name of YOUR_TEMPLATE.
-There are two setting automatically added in admin page configuration::Layout Settings, to activate or deactivate display of language and/or currency in header.
+Entwickelt von: Neville Kerr
+Aktualisiert auf Version 2 von: Twitchtoo Media
+Aktualisiert auf Version 3 von: Benny Philibel
+Aktualisiert auf Version 4 von: Pilou2/Piloujp
+Aktualisiert auf Version 5 von: WebConcept One
 
 ========================================================
 
-WHAT DOES THIS MODULE DO?
+WAS MACHT DIESES MODUL?
 
-This module allows you to display the language icons (flags) and currency symbols that are set in you cart admin as links in the navigation section of your header.
-Display of these new menu can be as standard link or icons depending on the number of languages/currecies available. You need, of course to set at least one extra language or currency.
-Header display can be turned on/off from Admin > Configuration > Layout Settings.
+Dieses Modul ermöglicht die Anzeige der in der Shop-Administration definierten Sprachsymbole (Flaggen) und Währungssymbole als Links im Navigationsbereich des Headers.
+
+Voraussetzung ist natürlich, dass mindestens eine zusätzliche Sprache oder Währung eingerichtet wurde.
+
+Die Anzeige im Header kann unter
+Admin → Konfiguration → Layout-Einstellungen
+ein- oder ausgeschaltet werden.
 
 ========================================================
 
-
-Please backup your files, SQL database THEN merge the contents of this module with your current Zen Cart files.
-
+Bitte erstellen Sie vor der Installation unbedingt eine Sicherung Ihrer Dateien sowie der SQL-Datenbank und führen Sie anschließend die Dateien dieses Moduls mit Ihrer bestehenden Zen-Cart-Installation zusammen.
 
 INSTALLATION
 
-Step 1:
-	Extract all the files from the zip file.
+Schritt 1:
 
-Step 2:
-Warning: if you are not using the standard files the following files should be MERGED as they WILL overwrite the core files. You can merge only the one for the template you use.
+Laden Sie alle Dateien aus dem Verzeichnis „NEUE-DATEIEN“ auf den Server hoch.
 
-	../includes/templates/template_default/common/tpl_header.php   This one is used by default when template specific file is missing like in Classic template.
-	../includes/templates/responsive_classic/common/tpl_header.php
- 	../includes/templates/responsive_classic-New/common/tpl_header.php
-	../includes/templates/bootstrap/common/tpl_header.php 	
-	
-Step 3:
-Upload (copy) these new files to your server.
-    ../admin/includes/functions/extra_functions/lang_cur_in_header.php
-	../images/icons/*.png
-	../includes/modules/header_currencies.php
-	../includes/modules/header_languages.php
-	../includes/templates/template_default/common/tpl_header_currencies.php
-	../includes/templates/template_default/common/tpl_header_languages.php
-	../includes/templates/template_default/css/stylesheet_lang-cur_header.css
-	../includes/templates/classic/css/stylesheet_lang-cur_header.css
-    Then depending on your template:
-	../includes/templates/responsive_classic/css/stylesheet_lang-cur_header.css
-    OR ../includes/templates/responsive_classic-New/css/stylesheet_lang-cur_header.css and ../includes/templates/responsive_classic-New/css/stylesheet_zzcustom_override.css
-    OR ../includes/templates/bootstrap/css/stylesheet_lang-cur_header.css
+Schritt 2:
+
+Laden Sie alle Dateien aus dem Verzeichnis „GEAENDERTE-DATEIEN“ auf den Server hoch.
 
 ========================================================
 
-To Remove/Undo the modification:
+DEINSTALLATION
 
-Run the following query from Admin > Tools > Install SQL Patches or use uninstall.sql file in folder sql to remove the configuration keys from the database:
+Schritt 1:
+
+Entfernen Sie die mit diesem Modul installierten Dateien von Ihrem Server. Stellen Sie dabei sicher, dass zusammengeführte Dateien wie
+
+includes/templates/TEMPLATE_NAME/common/tpl_header.php
+
+durch die zuvor gesicherten Originaldateien ersetzt werden.
+
+Schritt 2:
+
+Führen Sie die folgenden SQL-Anweisungen über
+
+Admin → Tools → SQL-Patches installieren
+
+aus, um die Konfigurationseinträge aus der Datenbank zu entfernen:
 
 DELETE FROM configuration WHERE configuration_key = 'HEADER_LANGUAGES_DISPLAY';
 DELETE FROM configuration WHERE configuration_key = 'HEADER_CURRENCIES_DISPLAY';
 
-Remove the files included in the original file set from your server, making certain you replace merged files includes/templates/TEMPLATE_NAME/common/tpl_header.php with with your backed up version.
-
 =========================================================
 
+Versionshistorie
 
-History:
-09/12/2025 - Release v4.2.0 for 2.x.x Automatic admin menu installation and template Responsive Classic New added.
-08/04/2025 - Release v4.1.1 for 2.x.x Template Responsive Classic New added.
-04/06/2025 - Release v4.1.0 for 2.0.0 (Boostrap v3.7) with improved CSS dropdown menus that display well on mobiles phones.
-05/11/2024 - Release v4.0.4 for 2.0.0 (Boostrap v3.7)
-10/28/2023 - Release v4.0.3 for 1.5.8a
-05/24/2023 - Release v4.0.2 for 1.5.8a
-02/27/2023 - Release v4.0 for 1.5.8a
-03/30/2021 - Release v3.0 for 1.5.7c
-03/12/2018 - Release v2.0 for 1.55f
-05/31/2006 - Initial Release v1.0
+2026-06-02 – Version 5.0 für Zen Cart Pro 157k
+
+Änderungen gegenüber dem Originalprojekt:
+
+* Verbesserte Click-/Touch-Ereignisbehandlung für Firefox Mobile und iOS Safari
+* Dokumentation für deutsche Zen-Cart-Installationen angepasst
+
+2025-09-12 – Version 4.2.0 für amerikanische 2.x.x
+Automatische Installation des Admin-Menüs und Unterstützung für Responsive Classic New hinzugefügt.
+
+2025-08-04 – Version 4.1.1 für amerikanische 2.x.x
+Unterstützung für Responsive Classic New hinzugefügt.
+
+2025-06-04 – Version 4.1.0 für amerikanische 2.0.0 (Bootstrap v3.7)
+Verbesserte CSS-Dropdown-Menüs für eine bessere Darstellung auf Mobilgeräten.
+
+2024-05-11 – Version 4.0.4 für amerikanische 2.0.0 (Bootstrap v3.7)
+
+2023-10-28 – Version 4.0.3 für amerikanische 1.5.8a
+
+2023-05-24 – Version 4.0.2 für amerikanische 1.5.8a
+
+2023-02-27 – Version 4.0 für amerikanische 1.5.8a
+
+2021-03-30 – Version 3.0 für amerikanische 1.5.7c
+
+2018-03-12 – Version 2.0 für amerikanische 1.5.5f
+
+2006-05-31 – Erstveröffentlichung Version 1.0
 
 ========================================================
