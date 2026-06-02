@@ -4,11 +4,11 @@ Dieses Projekt ist ein Fork des ursprünglichen Zen-Cart-Sprachumschalters.
 
 Dieser Fork wurde für deutsche Zen-Cart-Installationen angepasst und enthält zusätzliche Kompatibilitätskorrekturen für Firefox Mobile und iOS Safari.
 
-Entwickelt von: Neville Kerr
-Aktualisiert auf Version 2 von: Twitchtoo Media
-Aktualisiert auf Version 3 von: Benny Philibel
-Aktualisiert auf Version 4 von: Pilou2/Piloujp
-Aktualisiert auf Version 5 von: WebConcept One
+v1: Neville Kerr (original)  
+v2: Twitchtoo Media  
+v3: Benny Philibel  
+v4: Pilou2/Piloujp  
+v5: WebConcept One (dieser Fork)
 
 ## Hauptänderungen:
 
@@ -16,3 +16,24 @@ Aktualisiert auf Version 5 von: WebConcept One
 * Kompatibilitätskorrekturen für Firefox Mobile
 * Kompatibilitätskorrekturen für iOS Safari
 * Hinweise zur Installation für deutsche Zen-Cart-Umgebungen
+
+---
+
+# Language / Currency Switcher for German Zen Cart Pro
+
+This project is a fork of the original Zen Cart language switcher.
+
+This fork is adapted for German Zen Cart installations and includes additional compatibility fixes for Firefox Mobile and iOS Safari.
+
+v1: Neville Kerr (original)  
+v2: Twitchtoo Media  
+v3: Benny Philibel  
+v4: Pilou2/Piloujp  
+v5: WebConcept One (this fork)
+
+## Main changes
+
+Improved event handling for touch devices
+Compatibility fixes for Firefox Mobile
+Compatibility fixes for iOS Safari
+Installation notes for German Zen Cart environments
