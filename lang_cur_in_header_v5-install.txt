@@ -28,13 +28,20 @@ INSTALLATION
 
 Schritt 1:
 
-Ändern Sie das Verzeichnis "ADMIN" 
+Im Verzeichnis 1_NEUE_DATEIEN/ befindet sich ein Verzeichnis ADMIN/
+Benennen Sie dieses Verzeichnis nach dem tatsächlichen in ihrem Shop genutzten Namen um.
 
 Schritt 2:
 
 Laden Sie alle Dateien aus dem Verzeichnis „1_NEUE_DATEIEN“ auf den Server hoch.
 
 Schritt 3:
+
+Vergleichen Sie die Dateien aus dem Verzeichnis „2_GEAENDERTE_DATEIEN“ mit den vorhandenen Dateien auf ihrem Server.
+
+Hinweis: Um eine Datei zu vergleichen, benennen Sie die Datei um z. B. von tpl_header.php nach tpl_header.php.bak und laden diese herunter. Jetzt können Sie beide Dateien mit einem Programm wie "meld" bequem vergleichen und Änderungen gezielt übernehmen.
+
+Schritt 4:
 
 Laden Sie alle Dateien aus dem Verzeichnis „2_GEAENDERTE_DATEIEN“ auf den Server hoch.
 
