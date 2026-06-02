@@ -1,4 +1,4 @@
-Sprachen und Währungs Umschalter
+Sprachen / Währungs-Umschalter
 
 Version 5.0 für deutsche Zen Cart Pro 157k (zen-cart-pro.at)
 
@@ -14,7 +14,7 @@ WAS MACHT DIESES MODUL?
 
 Dieses Modul ermöglicht die Anzeige der in der Shop-Administration definierten Sprachsymbole (Flaggen) und Währungssymbole als Links im Navigationsbereich des Headers.
 
-Voraussetzung ist natürlich, dass mindestens eine zusätzliche Sprache oder Währung eingerichtet wurde.
+Voraussetzung ist, dass mindestens eine zusätzliche Sprache oder Währung eingerichtet wurde.
 
 Die Anzeige im Header kann unter
 Admin → Konfiguration → Layout-Einstellungen
@@ -28,11 +28,15 @@ INSTALLATION
 
 Schritt 1:
 
-Laden Sie alle Dateien aus dem Verzeichnis „NEUE-DATEIEN“ auf den Server hoch.
+Ändern Sie das Verzeichnis "ADMIN" 
 
 Schritt 2:
 
-Laden Sie alle Dateien aus dem Verzeichnis „GEAENDERTE-DATEIEN“ auf den Server hoch.
+Laden Sie alle Dateien aus dem Verzeichnis „1_NEUE_DATEIEN“ auf den Server hoch.
+
+Schritt 3:
+
+Laden Sie alle Dateien aus dem Verzeichnis „2_GEAENDERTE_DATEIEN“ auf den Server hoch.
 
 ========================================================
 
